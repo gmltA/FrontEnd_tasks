@@ -14,17 +14,17 @@
 
 The project should be implemented as a single-page application (SPA) with client-side routing (via browser's History API). Communication with remote data source has to be performed via AJAX.
 
-Upon implementation, a showcased version of the project should be deployed and hosted via web-server (local or remote one). You can use one of free hosting services across The Web ([Firebase Hosting](https://firebase.google.com/docs/hosting), etc), or run instance locally.
+Upon implementation, a showcased version of the project should be deployed and hosted via web-server (local or remote one). You can use one of free hosting services across The Web ([Firebase Hosting](https://firebase.google.com/docs/hosting), etc), or run instance on some publically-accessible remote machine.
 
 ## UI \ UX design
-
-User experience (UX) have to be considered prior to layout implementation. Interface should be clear for user. Main actions within each page should be somehow visible for the user at the first sight (using layout, color accents, hints, etc.).
 
 The interface of the application has to be marked down via HTML (HTML version 5). The markup itself has to be semantically correct (e.g. `<a>` tag can be used for links, but not for buttons). Different page sections should utilize existing HTML5 tags to keep page division clear for developers (`<nav>, <header>, <article>, ...`).
 
 Interface of the web-site must properly be displayed at least on following screens: 1440x900 (desktop) and your mobile device of choice. (You can use Chrome's emulator to test your site).
 
 Styling solution for this project is plain CSS (or pre-processor of your choice: SCSS, Less). **No third-party styling libraries (such as Bootstrap) are allowed by default.** Any library dependency have to be discussed personally prior to inclusion in project.
+
+User experience (UX) have to be considered prior to layout implementation. Interface should be clear for user. Main actions within each page should be somehow visible for the user at the first sight (using layout, color accents, hints, etc.).
 
 ### Tools:
 
@@ -43,7 +43,8 @@ Styling solution for this project is plain CSS (or pre-processor of your choice:
 
 ## Page interactivity
 
-Front end part of this project has to be implemented in JavaScript programming language (all latest language features are allowed and welcomed, no backward compatibility is mandatory). **No external libraries are allowed by default (except for vital ones: Firebase / Amazon connectivity libraries, etc.)** TypeScript may be used as a wrapper over JS.
+Front end part of this project has to be implemented in JavaScript programming language (all latest language features are allowed and welcomed, no backward compatibility is mandatory). **No external libraries are allowed by default (except for vital ones: Firebase / Amazon connectivity libraries, etc.)**
+**TypeScript** may be used as a wrapper over JS.
 
 ### Framework usage
 
@@ -83,58 +84,30 @@ It is much better, if you could come up with your own idea for project to implem
 #### 1. Expense manager
 
 Personal finance tracker. You can record all your spendings and income to understand where does your money actually go.
+<details>
+<summary>Basic functions</summary>
 
-##### Basic functions:
 - Authentication
 - Transaction list (Add / Edit / Remove transaction functions)
   - Two types of transactions: income / expense
-  - Each transaction should contain following data: amount, date, place (optional), comment (optional), image (optional).
+  - Each transaction should contain following data: amount, date, place (can be empty), comment (can be empty), image (can be empty).
 - Categories for transactions (Add / Edit / Remove category functions)
 - Statistics for user per period (month, year, week)
   - Total spendings (and per category)
   - Total income (and per category)
- 
+
+</details>
+
 **Examples:** [ZenMoney](https://zenmoney.ru/), [Spendee](https://www.spendee.com/)
 
-#### 2. Community-driven dictionary
 
-A website, where anyone can add a new word with its definition and extra description. Community can then upvote or downvote that word. If some word gets too many downvotes, it gets removed. On the main page there is a feed with top-rated words. Only authenticated users can add or vote for words in dictionary. Unauthenticated users can only see the dictionary itself.
-
-##### Basic functions:
-- Authentication
-- Main word feed (can be sorted by rating or creation date)
-  - Each word card in feed can contain word itself and short definition (limited by character count)
-- Word of the day on main page (selected randomly from words with positive rating)
-- Add new word. Entity should contain following data: word itself, definition, extra comments (optional), one or more links to external sources (other dictionaries, articles)
-  - Each word can have more than one entry created by different users (for example, for different contexts)
-- Ability to upvote / downvote specific word from feed or word page (only for authenticated users). Only one vote from each user is allowed, but user can cancel xe's vote.
-- A button to report a word entry for inappropriate content (user can add comment to tell moderators, why this word should be deleted)
- 
-**Example:** [Urban Dictionary](https://www.urbandictionary.com/)
-
-#### 3. CV-constructor
-
-A website, where user can create or edit its CVs.
-
-##### Basic functions:
-- Authentication
-- Main page: list of user's CVs
-- Create / edit page: a complex form with different sections (only one section at a time is visible, user can go through pages in any order)
-  - Main info (CV title, user name, surname, CV position (developer / tester / designer)
-  - Summary (employee's professional summary)
-  - Key skills (a list with one or more skills employee wants to highlight as vital)
-  - Technical skills (a list of technical skills: software, methodology knowledge, etc) with level of knowledge (basic, intermediate, advanced)
-  - Language knowledge (language name, knowledge level)
-  - Previous projects (project name, description, start date, end date)
-  - **User input should be validated on the client side before submission (e.g. no empty fields, no invalid data)**
-  
-**Example:** [LinkedIn's](https://www.linkedin.com) profile editor
-
-#### 4. Tea database
+#### 2. Tea database
 
 A website, that can be a library for different teas. Each user can add a new variety of tea. Other users can upvote or downvote each entity and also leave comments.
 
-##### Basic functions:
+<details>
+<summary>Basic functions</summary>
+
 
 - Authentication
 - Main page with top-5 library entities and 10 recently added varieties
@@ -144,13 +117,17 @@ A website, that can be a library for different teas. Each user can add a new var
 - On a page dedicated to the particular tea variety, user can see tea data, average price and comments.
 - A search page, where user can browse database by tea name and price constraints (min, max)
 
+</details>
+
 **Examples:** [Untappd](https://untappd.com/), [ViVino](https://www.vivino.com/)
 
-#### 5. Chat application
+#### 3. Chat application
 
 Yet another chat application.
 
-##### Basic functions:
+<details>
+<summary>Basic functions</summary>
+
 - Authentication
 - User profile: nickname, avatar change
 - 'User is typing' indicator
@@ -162,13 +139,17 @@ Yet another chat application.
 - Dark theme (automatic by browser media query and manual - in settings)
 - Local or remote notification by browser's notification API
 
+</details>
+
 **Examples**: Slack, Telegram
 
-#### 6. Group expenses app
+#### 4. Group expenses app
 
 An application to manage group bills paid by one person.
 
-##### Basic functions:
+<details>
+<summary>Basic functions</summary>
+
 - Authentication
 - English and Russian language support (switch in header)
 - Dashboard
@@ -178,13 +159,17 @@ An application to manage group bills paid by one person.
 - Edit / Delete expense
 - Mark expense as 'repaid'
 
+</details>
+
 **Example:**: [Spliwise](https://www.splitwise.com/)
 
-#### 7. Scandinavian crossword constructor
+#### 5. Scandinavian crossword constructor
 
 A website where user can create a crossword, obtain a unique ID for it, send it to friend and see, if xe can solve it!
 
-##### Basic functions:
+<details>
+<summary>Basic functions</summary>
+
 - Authentication
 - Constructor
   - Define grid dimension (horizontal and vertical cell number)
@@ -194,13 +179,17 @@ A website where user can create a crossword, obtain a unique ID for it, send it 
   - Solving progress is tracked for each user, which means more than one user can solve the same crossword independently
   - Validation is performed only when all words were filled
 
+</details>
+
 **Example:**: [Crossword maker](https://onlinetestpad.com/en/crosswordmaker)
 
-#### 8. Calendar
+#### 6. Calendar
 
 Time- and activity-management application. User can set appointments, tasks and reminders.
 
-##### Basic functions:
+<details>
+<summary>Basic functions</summary>
+
 - Authentication
 - Calendar view (year, month, week view). Days with appointments should be marked by colour of appointment (or multiple colours in case of more than one appointment)
 - Upcoming appointment for current day / pending tasks are on top of the page 
@@ -214,13 +203,17 @@ Time- and activity-management application. User can set appointments, tasks and 
 - Task creation (tasks have a 'completed' status. After user marked task as 'completed', it will disappear from 'pending' section)
 - Ability to edit / delete appointment or task
 
+</details>
+
 **Examples:** [TickTick](https://ticktick.com/) and well, any calendar.
 
-#### 9. Music player
+#### 7. Music player
 
 Music catalogue / player application.
 
-##### Basic functions:
+<details>
+<summary>Basic functions</summary>
+
 - Authentication
 - Upload music track
   - set / update its title, performer name, cover image
@@ -229,13 +222,17 @@ Music catalogue / player application.
 - User can perform a search across all uploaded music by all users
 - Create / edit / delete / duplicate playlists
 
+</details>
+
 **Examples:** [Yandex.Music](https://music.yandex.ru/), [Spotify](https://www.spotify.com/)
 
-#### 10. Cocktail database
+#### 8. Cocktail database
 
 A website, where user can share own unique cocktail recipe or rate cocktails created by others
 
-##### Basic functions:
+<details>
+<summary>Basic functions</summary>
+
 - Authentication
 - **Main feature: visualization** ([examples](https://trendland.com/wp-content/uploads/2013/01/shoot-em-up-infographic-of-30-shots.jpg))
   - each cocktail should have a dynamically generated visual representation based on ingredients selected by user upon creation
@@ -250,6 +247,138 @@ A website, where user can share own unique cocktail recipe or rate cocktails cre
   - recipe: an ordered list of ingredients with their volumes for this cocktail
 - An ability to rate cocktails (1-5 stars rating system) and leave a comment
 
+</details>
+
+**Examples:** [RateCoffee](https://ratecoffeespa.web.app/)
+
+#### 9. Flat plan maker
+
+Simple 2D flat plan maker.
+
+<details>
+<summary>Basic functions</summary>
+
+- Authentication
+- Ability to change flat dimensions
+- Ability to place walls
+- Drag and drop placement of furniture
+  - at least 10 different items (fridge, wardrobes, couch, bed, washing machine, etc)
+  - item can't have intersections with walls
+- Save / edit project functionality
+- Share project: application generates a link that user can share with someone to let them see the plan
+
+</details>
+
+**Examples:** [Floor plan creator](https://floorplancreator.net/)
+
+#### 10. 'Alias' game
+
+A game in which players have to explain words to others.
+
+<details>
+<summary>Basic functions</summary>
+
+- Word set management (CRUD)
+- Word set selection (with example words from the set)
+- Team management (define number of teams and set their names)
+- Game settings (number of words, time for each player)
+- Game process
+  - swipe gesture word controls
+  - sounds
+  - A page with stats after each player finishs explanation
+    - word status can be changed (guessed / skipped)
+- Past games statistics
+
+</details>
+
+**Examples:** [Alias](https://play.google.com/store/apps/details?id=com.inetstd.android.alias)
+
+#### 11. Online quiz
+
+Realtime quiz application. After quiz is created and started, a unique code is generated for participant to join.
+
+<details>
+<summary>Basic functions</summary>
+
+- Quiz creation
+  - define a quiz name
+  - define set of questions
+  - question can have answer options for player or can be a freeform question (user must type in the answer)
+  - set a time for each question
+- Quiz execution
+  - waiting phase with list of joined (via code) participants. Creator starts the quiz by pressing a button during this phase.
+  - running phase - each participant sees a question and have time to give an answer
+  - results phase - each participant can see quiz results
+
+</details>
+
+**Examples:** [Kahoot!](https://kahoot.com/)
+
+#### 12. File manager
+
+Filesystem emulation using Firebase [Cloud storage](https://firebase.google.com/docs/storage) and Firestore or Realtime DB for directory emulation.
+
+<details>
+<summary>Basic functions</summary>
+
+- Authentication (each user has personal space)
+- Windows Explorer OR MacOS Finder-alike interface
+  - buttons for common actions
+  - adaptive button grid (depends on screen size) [[ex1](res/grid_1.jpg?raw=true "Example 1"), [ex2](res/grid_2.jpg?raw=true "Example 2"), [ex3](res/grid_3.jpg?raw=true "Example 3")]
+  - at least 3 icon organization modes (table, list, grid)
+  - right-click context menu
+- Directory management (CRUD)
+  - nested directories support
+- File management (CRUD)
+  - file preview (side panel or modal)
+    - text files
+    - images
+- Drag and Drop support for files and folders
+
+</details>
+
+**Examples:** [Chonky.io](https://chonky.io/)
+
+#### 13. Anki-alike app
+
+Online tool to learn something new.
+
+<details>
+<summary>Basic functions</summary>
+
+- Authentication
+- Home page with current stats and reminders
+- Card sets (CRUD)
+- Cards (CRUD)
+- Spaced repetition algorithm
+
+</details>
+
+**Examples:** [Flippy](https://flippy-c2572.web.app/), [Anki](https://ankiweb.net/)
+
+#### 14. Trello-alike app
+
+An application to manage tasks and boards.
+
+<details>
+<summary>Basic functions</summary>
+
+- Authentication
+- Boards (CRUD)
+  - board title
+  - colour
+- Tasks (CRUD)
+  - title
+  - description
+  - colour
+  - expire date (can be empty)
+- Drag and Drop task and boards management
+
+</details>
+
+**Examples:** [GITrello](https://gitrello.me/), [Trello](https://trello.com/)
+
+
 ## 2. UX wireframe with HTML
 ### Acceptance criteria
 To pass the milestone, you must provide images (hand-drawn, digitally created) for most of the pages your web-site will have (for both display sizes). Each block should be represented by corresponding HTML-tag. Utilized HTML tags should be semantically-correct in terms of block function on the page.
@@ -258,7 +387,7 @@ To pass the milestone, you must provide images (hand-drawn, digitally created) f
 
 ## 3. UI design
 ### Acceptance criteria
-Milestone's acceptance criteria: a semi-finalized set of pages with production-ready design (can be updated on later stages of development) **for both screen sizes**.
+Milestone's acceptance criteria: a semi-finalized set of pages with production-ready design (can be updated on later stages of development) **for both screen sizes**. Modern CSS best-practices should be used (no `float` block positioning or `<table>` layouts are allowed).
 
 **Disclaimer:** as we do not study UI design in this course, there are no strict requirements to your project interface appearance. However, a more or less meaningful UI is required to pass this milestone, beacuse it will enforce you to use a good amount of CSS. Consider yourself advised to look through at least [Material Design reference](https://material.io/design/) to have a basic idea of how a good UI might look like. You can make a quick search over the internet to find a good reference your project may follow. Get ready for additional tasks during your project showcase on this milestone.
 
