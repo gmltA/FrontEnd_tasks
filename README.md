@@ -12,9 +12,7 @@
 
 # General project requirements
 
-The project should be implemented as a single-page application (SPA) with client-side routing (via browser's History API). Communication with remote data source has to be performed via AJAX.
-
-Upon implementation, a showcased version of the project should be deployed and hosted via web-server (local or remote one). You can use one of free hosting services across The Web ([Firebase Hosting](https://firebase.google.com/docs/hosting), etc), or run instance on some publically-accessible remote machine.
+A showcased version of the project (for milestone 3 und further) should be deployed and hosted via web-server (local or remote one). You can use one of free hosting services across The Web ([Firebase Hosting](https://firebase.google.com/docs/hosting), etc), or run instance on some publically-accessible remote machine.
 
 ## UI \ UX design
 
@@ -58,8 +56,7 @@ Thus, it is not recommended to use frameworks within this course, because any kn
 * [JavaScript: The Definitive Guide](https://rutracker.org/) — a good place to start
 * [JavaScript: The Good Parts](https://rutracker.org/)
 * [JavaScript: The Right Way](http://jstherightway.org/)
-* [Codecademy's introduction to JS](https://www.codecademy.com/learn/introduction-to-javascript
-) — alternative place to start
+* [Codecademy's introduction to JS](https://www.codecademy.com/learn/introduction-to-javascript) — alternative place to start
 * [MDN's JavaScript section](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Clean code concepts: JS version](https://github.com/ryanmcdermott/clean-code-javascript)
 * [Building SPA in plain JS](https://dev.to/rishavs/making-a-single-page-app-in-ye-good-olde-js-es6-3eng)
@@ -383,18 +380,36 @@ An application to manage tasks and boards.
 ### Acceptance criteria
 To pass the milestone, you must provide images (hand-drawn, digitally created) for most of the pages your web-site will have (for both display sizes). Each block should be represented by corresponding HTML-tag. Utilized HTML tags should be semantically-correct in terms of block function on the page.
 
+### Result grading
+- **[4-6]** knowldge of generic tags (`div`, `span`, `img`, `input`, `ul`, `p`, etc...).
+- **[7-8]** semantically-correct markup (`header`, `footer`, `article`, `nav`, etc...).
+- **[9-10]** rich semantic (`figure`, `picture`, `aside`, etc...), accessable (all interactive components should be accessible via <kbd>TAB</kbd>) markup with proper header hierarchy (`h1`, `h2`, etc).
+
 **Example:** [UX wireframe example (without HTML)](https://file.mockplus.com/image/2017/11/e8bbb60f-f2da-49cf-9c3b-64dbefe77b27.png) (your final result has to be more detailed, than the provided image)
 
 ## 3. UI design
 ### Acceptance criteria
-Milestone's acceptance criteria: a semi-finalized set of pages with production-ready design (can be updated on later stages of development) **for both screen sizes**. Modern CSS best-practices should be used (no `float` block positioning or `<table>` layouts are allowed).
+Milestone's acceptance criteria: a semi-finalized set of pages with production-ready design (can be updated on later stages of development) **for both screen sizes**. Modern CSS best-practices should be used (no `float` block positioning, `!important` overrides or `<table>` layouts are allowed).
 
 **Disclaimer:** as we do not study UI design in this course, there are no strict requirements to your project interface appearance. However, a more or less meaningful UI is required to pass this milestone, beacuse it will enforce you to use a good amount of CSS. Consider yourself advised to look through at least [Material Design reference](https://material.io/design/) to have a basic idea of how a good UI might look like. You can make a quick search over the internet to find a good reference your project may follow. Get ready for additional tasks during your project showcase on this milestone.
+
+### Result grading
+- **[4-6]** basic CSS usage. Customized `input`, `button` and other components, `:hover` and `:disabled` states for interactive elements, `display: flex` block positioning.
+- **[7-8]** `display: flex` or `display: grid` block positioning, `:focus` state for interactive elements (different from `:hover`), [BEM](https://ru.bem.info/methodology/quick-start/)-like CSS class naming.
+- **[9-10]** dark theme support (via media query and CSS variables), animations and rich visual style.
 
 ## 4. Front-end basics
 ### Acceptance criteria
 At this point you must provide a working skeleton of the website: basic navigation, routing, authentication (if required), state-management, networking, etc. A check-point to see if everything is going well before the final stage of development.
 
+### Result grading
+- **[4-6]** basic JS. Functions, variables (no `var` is allowed), cycles, arrays.
+- **[7-8]** classes, AJAX requests (via [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)), promises.
+- **[9-10]** SPA implementation (via browser's History API), [web components](https://developer.mozilla.org/en-us/docs/Web/Web_Components), `async` / `await`, local storage.
+
 ## 5. The Final Frontier
 ### Acceptance criteria
 A web-site that implements all requirements within selected topic.
+
+### Result grading
+- **[9-10]** CI (auto deployment) set-up.
