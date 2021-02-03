@@ -12,7 +12,9 @@
 
 # General project requirements
 
-A showcased version of the project (for milestone 3 und further) should be deployed and hosted via web-server (local or remote one). You can use one of free hosting services across The Web ([Firebase Hosting](https://firebase.google.com/docs/hosting), etc), or run instance on some publically-accessible remote machine.
+**Nota bene: be sure to complete [the first task](LAB_1.md) before starting the project.**
+
+A showcased version of the project (starting at milestone 3 und further) should be deployed and hosted via web-server (local or remote one). You can use one of free hosting services across The Web ([Firebase Hosting](https://firebase.google.com/docs/hosting), etc), or run instance on some publically-accessible remote machine.
 
 ## UI \ UX design
 
@@ -48,7 +50,7 @@ Front end part of this project has to be implemented in JavaScript programming l
 
 The main idea behind this course is for you to get a bit familiar with JavaScript as a programming language of web platform. While there are lots of different less or more popular frameworks that will make your life as a front-end developer easier, the basics of the language and ability to solve fundamental problems using zero-dependency approach is very valuable and can give you a better understanding of what this language and related APIs are capable of. There are lots of pros and cons of each framework in comparison to others, which may affect your decision to use one or another in particular project, but understanding core concepts is mandatory to use any of them.
 
-Thus, it is not recommended to use frameworks within this course, because any knowledge-check will be primarily focused on JavaScript itself. Albeit it is not strictly forbidden, you are encouraged to try task implementation in pure JS environment. However, if you still have plans to learn particular JavaScript framework during this semester or have previous hands-on experience you want to extend or utilize during it, this information should be provided along with project topic selection. Personal knowledge check will be adjusted accordingly. **At the end of the semester a framework-based project will not be accepted if major lack of framework understanding will be discovered. You have been warned!**
+Thus, it is not recommended to use frameworks within this course, because any knowledge-check will be primarily focused on JavaScript itself. Albeit it is not strictly forbidden, you are encouraged to try task implementation in pure JS environment. However, if you still have plans to learn particular JavaScript framework during this semester or previously had hands-on experience you want to extend or utilize during it, this information should be provided along with project topic selection. Personal knowledge check will be adjusted accordingly. **At the end of the semester a framework-based project will not be accepted if major lack of framework understanding will be discovered. You have been warned!**
 
 
 ### Things to explore:
@@ -65,11 +67,6 @@ Thus, it is not recommended to use frameworks within this course, because any kn
 
 * [VS Code](https://code.visualstudio.com/) — a very good and fast IDE by Microsoft (surprisingly)
 * [JetBrains WebStorm](https://www.jetbrains.com/ru-ru/webstorm/) — well, not very fast, but a very powerful IDE
-
-## Examples:
-
-* [Google I/O 2016 web client](https://github.com/google/ioweb2016)
-* TBE
 
 # Development milestones
 ## 1. Topic selection
@@ -280,7 +277,7 @@ A game in which players have to explain words to others.
 - Team management (define number of teams and set their names)
 - Game settings (number of words, time for each player)
 - Game process
-  - swipe gesture word controls
+  - swipe gesture word control
   - sounds
   - A page with stats after each player finishs explanation
     - word status can be changed (guessed / skipped)
@@ -374,6 +371,30 @@ An application to manage tasks and boards.
 </details>
 
 **Examples:** [GITrello](https://gitrello.me/), [Trello](https://trello.com/)
+
+#### 15. Song and lyrics DB
+
+An application to store and discuss song lyrics.
+
+<details>
+<summary>Basic functions</summary>
+
+- Authentication
+- Music tracks (CRUD)
+  - title
+  - album
+  - author
+- Lyrics (CRUD)
+  - each song can have one or more lyrics
+  - author
+  - language (original or translation)
+  - user can select (with mouse or touch) a part of the text and add an annotation (or explanation) to it
+  - text parts with annotations should be highlighted in text, annotations are displayed near the text
+  - other users can rate lyrics and comments (upvote / downvote)
+
+</details>
+
+**Examples:** [Genius](https://genius.com/)
 
 
 ## 2. UX wireframe with HTML
