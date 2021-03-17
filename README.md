@@ -399,14 +399,14 @@ An application to store and discuss song lyrics.
 
 ## 2. UX wireframe with HTML
 ### Acceptance criteria
-To pass the milestone, you must provide images (hand-drawn, digitally created) for most of the pages your web-site will have (for both display sizes). Each block should be represented by corresponding HTML-tag. Utilized HTML tags should be semantically-correct in terms of block function on the page.
+To pass the milestone, you must provide images (hand-drawn, digitally created) for most of the pages your web-site will have (for both display sizes). Each block and element should be marked by corresponding HTML-tag. Utilized HTML tags should be semantically-correct in terms of block function on the page.
 
 ### Result grading
 - **[4-6]** knowldge of generic tags (`div`, `span`, `img`, `input`, `ul`, `p`, etc...).
 - **[7-8]** semantically-correct markup (`header`, `footer`, `article`, `nav`, etc...).
 - **[9-10]** rich semantic (`figure`, `picture`, `aside`, etc...), accessable (all interactive components should be accessible via <kbd>TAB</kbd>) markup with proper header hierarchy (`h1`, `h2`, etc).
 
-**Example:** [UX wireframe example (without HTML)](https://file.mockplus.com/image/2017/11/e8bbb60f-f2da-49cf-9c3b-64dbefe77b27.png) (your final result has to be more detailed, than the provided image)
+**Example:** [UX wireframe example (without HTML)](https://file.mockplus.com/image/2017/11/e8bbb60f-f2da-49cf-9c3b-64dbefe77b27.png) (your final result has to also contain HTML markup).
 
 ## 3. UI design
 ### Acceptance criteria
